@@ -11,5 +11,5 @@ jobs:
       - name: color generator
         id: color-generator
         run: echo "SELECTED_COLOR=green" >> "$GITHUB_OUTPUT"
-      - name color receiver
-        run: echo "${{steps.color-generator.outputs.SELECTED_COLOR }}"}}"
+      - name: color receiver
+        run: echo "${{steps.color-generator.outputs.SELECTED_COLOR }}"
