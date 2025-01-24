@@ -8,12 +8,8 @@ jobs:
   MyFirstJob:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Hello World!"
-
-      - name: Checkout
-        uses: actions/checkout@v4.2.2
-
-      - name: List files in repository
-        run: |
-          echo "The repository ${{ github.repository }} contains the following files:"
-          tree
+      - name: color generator
+        id: color-generator
+        run: echo "SELECTED_COLOR=green" >> "$GITHUB_OUTPUT"
+      - name color receiver
+        run: echo "${{steps.color-generator.outputs.SELECTED_COLOR }}"}}"
