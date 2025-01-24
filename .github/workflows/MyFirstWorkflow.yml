@@ -8,6 +8,7 @@ jobs:
   MyFirstJob:
     runs-on: ubuntu-latest
     steps:
+      - uses: devops-actions/actionlint@v0.1.2
       - name: color generator
         id: color-generator
         run: echo "SELECTED_COLOR=green" >> "$GITHUB_OUTPUT"
